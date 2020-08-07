@@ -1,0 +1,58 @@
+@mixin star-size {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0;
+}
+
+@mixin align-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+// MEDIA QUERIES
+$screen-xs: 400px;
+$screen: 600px;
+
+@mixin xs {
+  @media screen and (max-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+@mixin optional {
+  @media screen and (max-width: #{$screen}) {
+    @content;
+  }
+}
+
+.rate-block {
+  @include align-center;
+  &__stars {
+    display: inline-flex;
+  }
+
+  &__star {
+    background-image: url('./../../img/star.svg');
+    @include star-size;
+  }
+
+  &__star-empty {
+    background-image: url('./../../img/star-empty.svg');
+    @include star-size;
+  }
+
+  li[class^='rate-block__star'] {
+    margin-right: 0.5rem;
+  }
+
+  &__description {
+    @include optional {
+      display: none;
+    }
+  }
+  @include xs {
+    display: none;
+  }
+}

@@ -77,12 +77,6 @@ $screen-md: 768px;
   top: -2.9rem;
 }
 
-@mixin star-size {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-top: 0;
-}
-
 @mixin align-center {
   display: flex;
   justify-content: space-around;
@@ -134,8 +128,6 @@ $screen-md: 768px;
   &__images {
     position: relative;
     width: 14rem;
-    // width: 25%;
-    // max-width: 14rem;
     @include optional {
       margin: auto;
     }
@@ -275,7 +267,6 @@ $screen-md: 768px;
 .cta-block {
   width: 25%;
   max-width: 28rem;
-  // width: 28rem;
   text-align: center;
   @include optional {
     margin: auto;
@@ -336,35 +327,5 @@ $screen-md: 768px;
       display: inline-block;
       margin-top: 1rem;
     }
-  }
-}
-
-.rate-block {
-  @include align-center;
-  &__stars {
-    display: inline-flex;
-  }
-
-  &__star {
-    background-image: url('./../../img/star.svg');
-    @include star-size;
-  }
-
-  &__star-empty {
-    background-image: url('./../../img/star-empty.svg');
-    @include star-size;
-  }
-
-  li[class^='rate-block__star'] {
-    margin-right: 0.5rem;
-  }
-
-  &__description {
-    @include optional {
-      display: none;
-    }
-  }
-  @include xs {
-    display: none;
   }
 }

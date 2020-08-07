@@ -1,21 +1,21 @@
-// // VARIABLES
-// $color-white: #fff;
-// $color-blue: #0055a0;
-// $color-dark-gray: #333333;
-// $color-light-gray: #f8f8f8;
-// $screen-md: 768px;
+// VARIABLES
+$color-white: #fff;
+$color-blue: #0055a0;
+$color-dark-gray: #333333;
+$color-light-gray: #f8f8f8;
+$screen-md: 768px;
 
-// // MIXINS
-// @mixin md {
-//   @media screen and (max-width: #{$screen-md}) {
-//     @content;
-//   }
-// }
+// MIXINS
+@mixin md {
+  @media screen and (max-width: #{$screen-md}) {
+    @content;
+  }
+}
 
-// @mixin hover-animation {
-//   background-color: $color-light-gray;
-//   color: $color-blue;
-// }
+@mixin hover-animation {
+  background-color: $color-light-gray;
+  color: $color-blue;
+}
 
 .pagination {
   display: flex;
