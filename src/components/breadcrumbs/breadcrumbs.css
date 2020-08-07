@@ -1,0 +1,28 @@
+.breadcrumbs {
+  padding: 2rem;
+  background: #f8f8f8;
+}
+
+.breadcrumbs__item {
+  display: inline;
+  color: #333333;
+  font-weight: 400;
+}
+
+.breadcrumbs__item + .breadcrumbs__item:before {
+  padding: 0.8rem;
+  content: '\003e';
+  color: #0055a0;
+}
+
+.breadcrumbs__link {
+  color: #0055a0;
+  font-weight: 300;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.breadcrumbs__link:hover {
+  color: #333333;
+}
+/*# sourceMappingURL=breadcrumbs.css.map */

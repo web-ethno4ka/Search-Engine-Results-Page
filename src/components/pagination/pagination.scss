@@ -1,0 +1,43 @@
+// // VARIABLES
+// $color-white: #fff;
+// $color-blue: #0055a0;
+// $color-dark-gray: #333333;
+// $color-light-gray: #f8f8f8;
+// $screen-md: 768px;
+
+// // MIXINS
+// @mixin md {
+//   @media screen and (max-width: #{$screen-md}) {
+//     @content;
+//   }
+// }
+
+// @mixin hover-animation {
+//   background-color: $color-light-gray;
+//   color: $color-blue;
+// }
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin: 3rem 0;
+  @include md {
+    justify-content: center;
+    width: 95vw;
+  }
+
+  &__item {
+    padding: 0.5rem 1rem;
+    color: $color-dark-gray;
+    font-weight: 300;
+
+    &--active {
+      background-color: $color-blue;
+      color: $color-white;
+    }
+
+    &:hover:not(&--active) {
+      @include hover-animation;
+    }
+  }
+}

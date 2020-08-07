@@ -1,0 +1,370 @@
+// COLORS
+$color-blue: #0055a0;
+$color-light-blue: #0163b9;
+$color-green: #7ab51d;
+$color-yellow: #ffe400;
+$color-orange: #ff6000;
+$color-light-gray: #f8f8f8;
+$color-gray: #ababab;
+$color-dark-gray: #333333;
+$color-white: #fff;
+
+// SIZES
+$size-icon: 2rem;
+$size-icon-mobile: 1.6rem;
+$height-field: 3.8rem;
+
+// ANIMATIONS
+$links: all 0.3s ease-in-out;
+
+// MEDIA QUERIES
+$screen-xs: 400px;
+$screen: 600px;
+$screen-md: 768px;
+
+@mixin btn($color-btn) {
+  width: 28rem;
+  height: $height-field;
+  font: 200 1.6rem Proxima Nova;
+  letter-spacing: 0.6px;
+  color: $color-white;
+  background: $color-btn;
+  transition: $links;
+
+  &:hover {
+    background: lighten($color-btn, 8%);
+    cursor: pointer;
+  }
+}
+
+@mixin btn-border($color-btn) {
+  width: 28rem;
+  height: $height-field;
+  font: 200 1.6rem Proxima Nova;
+  letter-spacing: 0.6px;
+  color: $color-white;
+  background: $color-btn;
+  transition: $links;
+
+  &:hover {
+    background: lighten($color-btn, 8%);
+    cursor: pointer;
+  }
+}
+
+@mixin tyre-season {
+  position: absolute;
+  width: 1.8rem;
+  top: 0;
+  right: -1rem;
+}
+
+@mixin bold-text {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+@mixin icons-position {
+  position: absolute;
+  width: 1.5rem;
+  left: -2rem;
+}
+
+@mixin badge-properties {
+  position: absolute;
+  width: 6rem;
+  left: -4rem;
+  top: -2.9rem;
+}
+
+@mixin star-size {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0;
+}
+
+@mixin align-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+// MEDIA QUERIES
+
+@mixin xs {
+  @media screen and (max-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (max-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin optional {
+  @media screen and (max-width: #{$screen}) {
+    @content;
+  }
+}
+
+.cards-block {
+  justify-content: space-around;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 2rem;
+  @include md {
+    width: 95vw;
+  }
+  @include xs {
+    flex-flow: column;
+    margin: 0;
+  }
+
+  &:nth-child(even) {
+    background: $color-light-gray;
+  }
+
+  &:nth-child(odd) {
+    background: $color-white;
+  }
+
+  &__images {
+    position: relative;
+    width: 14rem;
+    // width: 25%;
+    // max-width: 14rem;
+    @include optional {
+      margin: auto;
+    }
+  }
+
+  &--winter::after {
+    @include tyre-season;
+    content: url('./../../img/winter.svg');
+  }
+
+  &--summer::after {
+    @include tyre-season;
+    content: url('./../../img/summer.svg');
+  }
+
+  &--all-season::after {
+    @include tyre-season;
+    content: url('./../../img/all-season-2.svg');
+  }
+
+  &--best-price::before {
+    content: url('./../../img/badge-price-2.svg');
+    @include badge-properties;
+    @include optional {
+      display: none;
+    }
+  }
+
+  &--best-seller::before {
+    content: url('./../../img/badge-seller-2.svg');
+    @include badge-properties;
+    @include optional {
+      display: none;
+    }
+  }
+
+  &--high-rate::before {
+    content: url('./../../img/badge-rate-2.svg');
+    @include badge-properties;
+    @include optional {
+      display: none;
+    }
+  }
+
+  &__photo,
+  &__logo {
+    width: 100%;
+    min-width: 8rem;
+  }
+
+  &__photo-mobile {
+    display: none;
+    @include xs {
+      display: block;
+      width: 100%;
+      min-width: 8rem;
+    }
+  }
+
+  &__photo {
+    @include xs {
+      display: none;
+    }
+  }
+
+  &__description {
+    width: 50%;
+    min-width: 15rem;
+    margin: 0 2rem;
+    @include optional {
+      margin: auto;
+      width: 50%;
+      min-width: 15rem;
+      margin-top: 1rem;
+      h2,
+      h3 {
+        font-size: 1.4rem;
+        text-align: center;
+      }
+    }
+    @include xs {
+      width: 100%;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    @include xs {
+      display: none;
+    }
+  }
+
+  &__item {
+    @include bold-text;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    a {
+      color: $color-blue; // doesn't work in "&__item" block
+    }
+  }
+}
+
+.tyre-characteristics {
+  margin-top: 2rem;
+  @include optional {
+    display: flex;
+    justify-content: center;
+  }
+  @include xs {
+    display: none;
+  }
+  &__link {
+    display: inline-block;
+    margin: 0 2rem;
+    position: relative;
+  }
+
+  &__link:nth-child(1)::before {
+    content: url('./../../img/1.svg');
+    @include icons-position;
+  }
+
+  &__link:nth-child(2)::before {
+    content: url('./../../img/2.svg');
+    @include icons-position;
+  }
+
+  &__link:nth-child(3)::before {
+    content: url('./../../img/3.svg');
+    @include icons-position;
+  }
+}
+
+.cta-block {
+  width: 25%;
+  max-width: 28rem;
+  // width: 28rem;
+  text-align: center;
+  @include optional {
+    margin: auto;
+    min-width: 10rem;
+    margin-top: 2rem;
+  }
+  @include xs {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  &__price {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-blue;
+    @include xs {
+      display: block;
+    }
+  }
+
+  &__discount {
+    @include align-center;
+    @include xs {
+      display: none;
+    }
+  }
+
+  &__discount > span {
+    font-size: 1.6rem;
+    color: $color-dark-gray;
+  }
+
+  &__discount > span:nth-child(2) {
+    padding: 0.5rem 2rem;
+    border: 1px solid $color-orange;
+    color: $color-orange;
+  }
+
+  &__btn-offers {
+    @include btn-border($color-gray);
+    width: 100%;
+    @include xs {
+      width: 45%;
+    }
+  }
+
+  &__btn-cart {
+    @include btn($color-green);
+    width: 100%;
+    @include xs {
+      width: 45%;
+    }
+  }
+
+  button[class^='cta-block__btn'] {
+    margin-top: 2rem;
+    @include xs {
+      display: inline-block;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.rate-block {
+  @include align-center;
+  &__stars {
+    display: inline-flex;
+  }
+
+  &__star {
+    background-image: url('./../../img/star.svg');
+    @include star-size;
+  }
+
+  &__star-empty {
+    background-image: url('./../../img/star-empty.svg');
+    @include star-size;
+  }
+
+  li[class^='rate-block__star'] {
+    margin-right: 0.5rem;
+  }
+
+  &__description {
+    @include optional {
+      display: none;
+    }
+  }
+  @include xs {
+    display: none;
+  }
+}

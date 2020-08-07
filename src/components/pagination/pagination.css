@@ -1,0 +1,35 @@
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 3rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .pagination {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 95vw;
+  }
+}
+
+.pagination__item {
+  padding: 0.5rem 1rem;
+  color: #333333;
+  font-weight: 300;
+}
+
+.pagination__item--active {
+  background-color: #0055a0;
+  color: #fff;
+}
+
+.pagination__item:hover:not(.pagination__item--active) {
+  background-color: #f8f8f8;
+  color: #0055a0;
+}
+/*# sourceMappingURL=pagination.css.map */

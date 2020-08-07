@@ -1,0 +1,160 @@
+// $screen-md: 768px;
+
+// @mixin md {
+//   @media screen and (max-width: #{$screen-md}) {
+//     @content;
+//   }
+// }
+
+// COLORS
+$color-blue: #0055a0;
+$color-light-blue: #0163b9;
+$color-green: #7ab51d;
+$color-yellow: #ffe400;
+$color-orange: #ff6000;
+$color-light-gray: #f8f8f8;
+$color-gray: #ababab;
+$color-dark-gray: #333333;
+$color-white: #fff;
+
+// SIZES
+$size-icon: 2rem;
+$size-icon-mobile: 1.6rem;
+$height-field: 3.8rem;
+
+// ANIMATIONS
+$links: all 0.3s ease-in-out;
+
+// MEDIA QUERIES
+$screen-xs: 400px;
+$screen: 600px;
+$screen-sm: 640px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+@mixin filter-field($width-field) {
+  width: $width-field;
+  height: $height-field;
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+
+@mixin btn($color-btn) {
+  width: 28rem;
+  height: $height-field;
+  font: 200 1.6rem Proxima Nova;
+  letter-spacing: 0.6px;
+  color: $color-white;
+  background: $color-btn;
+  transition: $links;
+
+  &:hover {
+    background: lighten($color-btn, 8%);
+    cursor: pointer;
+  }
+}
+
+@mixin btn-border($color-btn) {
+  width: 28rem;
+  height: $height-field;
+  font: 200 1.6rem Proxima Nova;
+  letter-spacing: 0.6px;
+  color: $color-white;
+  background: $color-btn;
+  transition: $links;
+
+  &:hover {
+    background: lighten($color-btn, 8%);
+    cursor: pointer;
+  }
+}
+
+@mixin tyre-season {
+  position: absolute;
+  width: 1.8rem;
+  top: 0;
+  right: -1rem;
+}
+
+@mixin bold-text {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+@mixin icons-position {
+  position: absolute;
+  width: 1.5rem;
+  left: -2rem;
+}
+
+@mixin badge-properties {
+  position: absolute;
+  width: 6rem;
+  left: -4rem;
+  top: -2.9rem;
+}
+
+@mixin star-size {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0;
+}
+
+@mixin align-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+@mixin hover-animation {
+  background-color: $color-light-gray;
+  color: $color-blue;
+}
+
+// MEDIA QUERIES
+
+@mixin xs {
+  @media screen and (max-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (max-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (max-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (max-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (max-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+@mixin optional {
+  @media screen and (max-width: #{$screen}) {
+    @content;
+  }
+}
+
+.heading-block {
+  margin-left: 2rem;
+  @include md {
+    font-size: 2.2rem;
+    margin: 2rem;
+  }
+}
