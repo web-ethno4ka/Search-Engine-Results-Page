@@ -1,0 +1,358 @@
+.cards-block {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .cards-block {
+    width: 95vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cards-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    margin: 0;
+  }
+}
+
+.cards-block:nth-child(even) {
+  background: #f8f8f8;
+}
+
+.cards-block:nth-child(odd) {
+  background: #fff;
+}
+
+.cards-block__images {
+  position: relative;
+  width: 14rem;
+}
+
+@media screen and (max-width: 600px) {
+  .cards-block__images {
+    margin: auto;
+  }
+}
+
+.cards-block--winter::after {
+  position: absolute;
+  width: 1.8rem;
+  top: 0;
+  right: -1rem;
+  content: url("./../../img/winter.svg");
+}
+
+.cards-block--summer::after {
+  position: absolute;
+  width: 1.8rem;
+  top: 0;
+  right: -1rem;
+  content: url("./../../img/summer.svg");
+}
+
+.cards-block--all-season::after {
+  position: absolute;
+  width: 1.8rem;
+  top: 0;
+  right: -1rem;
+  content: url("./../../img/all-season-2.svg");
+}
+
+.cards-block--best-price::before {
+  content: url("./../../img/badge-price-2.svg");
+  position: absolute;
+  width: 6rem;
+  left: -4rem;
+  top: -2.9rem;
+}
+
+@media screen and (max-width: 600px) {
+  .cards-block--best-price::before {
+    display: none;
+  }
+}
+
+.cards-block--best-seller::before {
+  content: url("./../../img/badge-seller-2.svg");
+  position: absolute;
+  width: 6rem;
+  left: -4rem;
+  top: -2.9rem;
+}
+
+@media screen and (max-width: 600px) {
+  .cards-block--best-seller::before {
+    display: none;
+  }
+}
+
+.cards-block--high-rate::before {
+  content: url("./../../img/badge-rate-2.svg");
+  position: absolute;
+  width: 6rem;
+  left: -4rem;
+  top: -2.9rem;
+}
+
+@media screen and (max-width: 600px) {
+  .cards-block--high-rate::before {
+    display: none;
+  }
+}
+
+.cards-block__photo, .cards-block__logo {
+  width: 100%;
+  min-width: 8rem;
+}
+
+.cards-block__photo-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 400px) {
+  .cards-block__photo-mobile {
+    display: block;
+    width: 100%;
+    min-width: 8rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cards-block__photo {
+    display: none;
+  }
+}
+
+.cards-block__description {
+  width: 50%;
+  min-width: 15rem;
+  margin: 0 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .cards-block__description {
+    margin: auto;
+    width: 50%;
+    min-width: 15rem;
+    margin-top: 1rem;
+  }
+  .cards-block__description h2,
+  .cards-block__description h3 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cards-block__description {
+    width: 100%;
+  }
+}
+
+.cards-block__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 400px) {
+  .cards-block__links {
+    display: none;
+  }
+}
+
+.cards-block__item {
+  font-size: 1.6rem;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.cards-block__item a {
+  color: #0055a0;
+}
+
+.tyre-characteristics {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .tyre-characteristics {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .tyre-characteristics {
+    display: none;
+  }
+}
+
+.tyre-characteristics__link {
+  display: inline-block;
+  margin: 0 2rem;
+  position: relative;
+}
+
+.tyre-characteristics__link:nth-child(1)::before {
+  content: url("./../../img/1.svg");
+  position: absolute;
+  width: 1.5rem;
+  left: -2rem;
+}
+
+.tyre-characteristics__link:nth-child(2)::before {
+  content: url("./../../img/2.svg");
+  position: absolute;
+  width: 1.5rem;
+  left: -2rem;
+}
+
+.tyre-characteristics__link:nth-child(3)::before {
+  content: url("./../../img/3.svg");
+  position: absolute;
+  width: 1.5rem;
+  left: -2rem;
+}
+
+.cta-block {
+  width: 25%;
+  max-width: 28rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .cta-block {
+    margin: auto;
+    min-width: 10rem;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cta-block {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+.cta-block__price {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0055a0;
+}
+
+@media screen and (max-width: 400px) {
+  .cta-block__price {
+    display: block;
+  }
+}
+
+.cta-block__discount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 400px) {
+  .cta-block__discount {
+    display: none;
+  }
+}
+
+.cta-block__discount > span {
+  font-size: 1.6rem;
+  color: #333333;
+}
+
+.cta-block__discount > span:nth-child(2) {
+  padding: 0.5rem 2rem;
+  border: 1px solid #ff6000;
+  color: #ff6000;
+}
+
+.cta-block__btn-offers {
+  width: 28rem;
+  height: 3.8rem;
+  font: 200 1.6rem Proxima Nova;
+  letter-spacing: 0.6px;
+  color: #fff;
+  background: #ababab;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+.cta-block__btn-offers:hover {
+  background: #bfbfbf;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  .cta-block__btn-offers {
+    width: 45%;
+  }
+}
+
+.cta-block__btn-cart {
+  width: 28rem;
+  height: 3.8rem;
+  font: 200 1.6rem Proxima Nova;
+  letter-spacing: 0.6px;
+  color: #fff;
+  background: #7ab51d;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+.cta-block__btn-cart:hover {
+  background: #92d823;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  .cta-block__btn-cart {
+    width: 45%;
+  }
+}
+
+.cta-block button[class^='cta-block__btn'] {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 400px) {
+  .cta-block button[class^='cta-block__btn'] {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+}
+/*# sourceMappingURL=product-card.css.map */

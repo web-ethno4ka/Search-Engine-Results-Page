@@ -1,0 +1,157 @@
+// COLORS
+$color-blue: #0055a0;
+$color-yellow: #ffe400;
+$color-dark-gray: #333333;
+$color-white: #fff;
+
+// SIZES
+$size-icon: 2rem;
+$size-icon-mobile: 1.6rem;
+$height-field: 3.8rem;
+
+// ANIMATIONS
+$links: all 0.3s ease-in-out;
+
+// MEDIA QUERIES
+$screen-xs: 400px;
+$screen: 600px;
+$screen-sm: 640px;
+$screen-md: 768px;
+
+// MEDIA QUERIES
+@mixin xs {
+  @media screen and (max-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (max-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (max-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin optional {
+  @media screen and (max-width: #{$screen}) {
+    @content;
+  }
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  background: $color-blue;
+  @include optional {
+    padding: 1rem;
+  }
+  @include xs {
+    justify-content: space-around;
+    flex-flow: row wrap;
+  }
+
+  &__logo-block {
+    width: 30%;
+    max-width: 28rem;
+    @include xs {
+      width: 60%;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  &__search-block {
+    width: 30%;
+    max-width: 280px;
+    @include sm {
+      width: 10%;
+    }
+  }
+
+  &__search-field {
+    height: $height-field;
+    width: 100%;
+    padding: 0 1rem;
+    background: $color-white;
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__search-btn {
+    height: $height-field;
+    width: 3.8rem;
+    background: $color-white;
+    cursor: pointer;
+    @include sm {
+      background: transparent;
+    }
+
+    i {
+      font-size: $size-icon;
+      color: $color-dark-gray;
+      &:hover {
+        color: $color-blue;
+      }
+      @include sm {
+        color: $color-white;
+        font-size: $size-icon-mobile;
+        transition: $links;
+        &:hover {
+          color: $color-yellow;
+        }
+      }
+    }
+  }
+
+  &__mobile-menu-block {
+    display: none;
+    @include sm {
+      display: block;
+    }
+  }
+
+  &__mobile-menu-btn {
+    @include sm {
+      background: transparent;
+      color: $color-white;
+      font-size: $size-icon-mobile;
+      transition: $links;
+      &:hover {
+        color: $color-yellow;
+      }
+    }
+  }
+}
+
+.icons-block {
+  &__item:not(:last-child) {
+    margin-right: 4rem;
+    @include md {
+      margin-right: 3rem;
+    }
+  }
+
+  &__link {
+    color: $color-white;
+    font-size: $size-icon;
+    transition: $links;
+    &:hover {
+      color: $color-yellow;
+    }
+    @include sm {
+      font-size: 1.6rem;
+    }
+  }
+}

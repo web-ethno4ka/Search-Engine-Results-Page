@@ -1,10 +1,12 @@
 import React from 'react';
+import './header.scss';
+import logo from './../../img/logo.png';
 
 export default function Header() {
   return (
     <header className="header flex-row ">
       <div className="header__logo-block" onclick="window.location.href='#'">
-        <img src="img/logo.png" alt="logotype" />
+        <img src={logo} alt={'logotype'} />
       </div>
 
       <div className="icons-block flex-row">

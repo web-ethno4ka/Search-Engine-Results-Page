@@ -1,0 +1,48 @@
+.rate-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+.rate-block__stars {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.rate-block__star {
+  background-image: url("./../../img/star.svg");
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0;
+}
+
+.rate-block__star-empty {
+  background-image: url("./../../img/star-empty.svg");
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0;
+}
+
+.rate-block li[class^='rate-block__star'] {
+  margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .rate-block__description {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .rate-block {
+    display: none;
+  }
+}
+/*# sourceMappingURL=rate.css.map */
