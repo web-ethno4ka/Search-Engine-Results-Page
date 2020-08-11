@@ -1,5 +1,14 @@
 import React from 'react';
 import './header.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faPhone,
+  faEnvelopeOpenText,
+  faUserTie,
+  faShoppingBasket,
+  faSearch,
+  faBars,
+} from '@fortawesome/free-solid-svg-icons';
 import logo from './../../img/logo.png';
 
 export default function Header() {
@@ -12,22 +21,22 @@ export default function Header() {
       <div className="icons-block flex-row">
         <div className="icons-block__item">
           <a href="#" className="icons-block__link">
-            <i className="fas fa-phone"></i>
+            <FontAwesomeIcon icon={faPhone} />
           </a>
         </div>
         <div className="icons-block__item">
           <a href="#" className="icons-block__link">
-            <i className="fas fa-envelope-open-text"></i>
+            <FontAwesomeIcon icon={faEnvelopeOpenText} />
           </a>
         </div>
         <div className="icons-block__item">
           <a href="#" className="icons-block__link">
-            <i className="fas fa-user-tie"></i>
+            <FontAwesomeIcon icon={faUserTie} />
           </a>
         </div>
         <div className="icons-block__item">
           <a href="#" className="icons-block__link">
-            <i className="fas fa-shopping-basket"></i>
+            <FontAwesomeIcon icon={faShoppingBasket} />
           </a>
         </div>
       </div>
@@ -39,13 +48,13 @@ export default function Header() {
           placeholder="What do you want to find?"
         />
         <button className="btn header__search-btn">
-          <i className="fas fa-search"></i>
+          <FontAwesomeIcon icon={faSearch} />
         </button>
       </div>
 
       <div className="header__mobile-menu-block">
         <button className="header__mobile-menu-btn">
-          <i className="fas fa-bars"></i>
+          <FontAwesomeIcon icon={faBars} />
         </button>
       </div>
     </header>
