@@ -1,0 +1,113 @@
+// COLORS
+$color-blue: #0055a0;
+$color-white: #fff;
+$color-light-gray: #f8f8f8;
+$color-dark-gray: #333333;
+
+// ANIMATIONS
+$links: all 0.3s ease-in-out;
+
+// MEDIA QUERIES
+$screen-xs: 400px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+// SIZES
+$height-field: 3.8rem;
+
+// MEDIA QUERIES
+@mixin xs {
+  @media screen and (max-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (max-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (max-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+@mixin filter-field($width-field) {
+  width: $width-field;
+  height: $height-field;
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+
+@mixin btn($color-btn) {
+  width: 28rem;
+  height: $height-field;
+  font: 200 1.6rem Proxima Nova;
+  letter-spacing: 0.6px;
+  color: $color-white;
+  background: $color-btn;
+  transition: $links;
+
+  &:hover {
+    background: lighten($color-btn, 8%);
+    cursor: pointer;
+  }
+}
+
+.filter-block {
+  padding: 0 2rem;
+  color: $color-dark-gray;
+  background: $color-light-gray;
+  padding-bottom: 1rem;
+
+  &__wrapper {
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 2rem 0;
+    @include lg {
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+    }
+  }
+
+  h3 {
+    @include xs {
+      text-align: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    @include xl {
+      margin-right: 1rem;
+    }
+    @include lg {
+      margin-bottom: 2rem;
+    }
+    @include xs {
+      margin-right: 0;
+    }
+
+    .input-field--regular {
+      @include filter-field(25rem);
+    }
+
+    .input-field--shorter {
+      @include filter-field(10rem);
+      @include xs {
+        @include filter-field(25rem);
+      }
+    }
+  }
+
+  &__btn {
+    @include btn($color-blue);
+    margin-bottom: 0;
+    @include lg {
+      align-self: center;
+    }
+  }
+}

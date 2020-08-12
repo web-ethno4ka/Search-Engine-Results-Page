@@ -1,6 +1,7 @@
 import React from 'react';
 import Select from '../select/select';
 import Tags_block from './tags-block';
+import './tags-sorting-block.scss';
 
 export default function Tags_sorting_block() {
   return (

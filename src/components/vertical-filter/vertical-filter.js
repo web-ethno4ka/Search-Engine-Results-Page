@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../button/button';
 import Select from '../select/select';
+import './vertical-filter.scss';
 
 export default function Vertical_filter() {
   return (

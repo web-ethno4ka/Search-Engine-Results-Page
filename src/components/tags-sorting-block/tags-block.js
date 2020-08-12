@@ -1,4 +1,5 @@
 import React from 'react';
+import './tags-block.scss';
 
 export default function Tags_block() {
   return (

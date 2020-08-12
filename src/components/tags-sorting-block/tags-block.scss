@@ -1,0 +1,67 @@
+$color-blue: #0055a0;
+
+// MEDIA QUERIES
+$screen-xs: 400px;
+$screen: 600px;
+$screen-md: 768px;
+
+// MEDIA QUERIES
+@mixin xs {
+  @media screen and (max-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (max-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin optional {
+  @media screen and (max-width: #{$screen}) {
+    @content;
+  }
+}
+
+@mixin bold-text {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.tags-block {
+  display: flex;
+  flex-flow: row wrap;
+  @include md {
+    max-width: 50vw;
+  }
+  @include optional {
+    max-width: 95vw;
+  }
+  @include xs {
+    justify-content: center;
+  }
+
+  &__item {
+    position: relative;
+    margin-top: 0;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 3.5rem;
+    border: 1px solid $color-blue;
+    border-radius: 2rem;
+  }
+
+  &__link {
+    @include bold-text;
+    color: $color-blue;
+  }
+
+  &__link::before {
+    content: url('./../../img/close-solid.svg');
+    position: absolute;
+    width: 1.5rem;
+    right: 0.8rem;
+    top: 0.7rem;
+  }
+}

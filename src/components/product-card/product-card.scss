@@ -85,7 +85,6 @@ $screen-md: 768px;
 }
 
 // MEDIA QUERIES
-
 @mixin xs {
   @media screen and (max-width: #{$screen-xs}) {
     @content;

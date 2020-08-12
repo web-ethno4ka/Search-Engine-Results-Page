@@ -1,6 +1,7 @@
 import React from 'react';
 import Select from '../select/select';
 import Button from '../button/button';
+import './horizontal-filter.scss';
 
 export default function Horizontal_filter() {
   return (

@@ -1,3 +1,10 @@
+// VARIABLES
+$screen-md: 768px;
+$color-white: #fff;
+$color-dark-gray: #333333;
+
+// MEDIA QUERIES
+$screen: 600px;
 $screen-md: 768px;
 
 @mixin md {
@@ -6,10 +13,50 @@ $screen-md: 768px;
   }
 }
 
+@mixin optional {
+  @media screen and (max-width: #{$screen}) {
+    @content;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background: $color-white;
+
+  &__container {
+    width: 100%;
+    max-width: 144rem;
+  }
+}
+
 .heading-block {
   margin-left: 2rem;
   @include md {
     font-size: 2.2rem;
     margin: 2rem;
+  }
+}
+
+.serp-block {
+  display: flex;
+  width: 100vw;
+  padding: 0 2rem;
+  color: $color-dark-gray;
+  background: $color-white;
+  @include md {
+    flex-flow: column;
+  }
+  @include optional {
+    padding: 1rem;
+  }
+}
+
+.search-results-block {
+  margin-left: 2rem;
+  width: 110rem;
+  @include md {
+    margin-left: 0;
   }
 }
