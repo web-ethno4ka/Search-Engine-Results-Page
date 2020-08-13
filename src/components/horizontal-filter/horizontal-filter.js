@@ -13,7 +13,6 @@ export default function Horizontal_filter() {
           <Select />
           <Select />
           <Select />
-          <Select />
 
           {/* <div className="filter-block__item">
             <label>Tyre type</label>

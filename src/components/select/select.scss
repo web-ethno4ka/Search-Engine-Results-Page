@@ -1,0 +1,59 @@
+$height-field: 3.8rem;
+
+// MEDIA QUERIES
+$screen-xs: 400px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+// MEDIA QUERIES
+@mixin xs {
+  @media screen and (max-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (max-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (max-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+@mixin filter-field($width-field) {
+  width: $width-field;
+  height: $height-field;
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+
+.filter-block {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    @include xl {
+      margin-right: 1rem;
+    }
+    @include lg {
+      margin-bottom: 2rem;
+    }
+    @include xs {
+      margin-right: 0;
+    }
+
+    .input-field--regular {
+      @include filter-field(25rem);
+    }
+
+    .input-field--shorter {
+      @include filter-field(10rem);
+      @include xs {
+        @include filter-field(25rem);
+      }
+    }
+  }
+}

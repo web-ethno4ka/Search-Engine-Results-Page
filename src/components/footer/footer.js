@@ -1,4 +1,12 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faGooglePlusG,
+  faFacebookF,
+  faInstagram,
+  faTwitter,
+  faYoutube,
+} from '@fortawesome/free-brands-svg-icons';
 import './footer.scss';
 
 export default function Footer() {
@@ -144,27 +152,32 @@ export default function Footer() {
           <div className="footer__socials-block">
             <div className="footer__socials-item">
               <a href="#" className="footer__socials-link">
-                <i className="fab fa-google-plus-g"></i>
+                <FontAwesomeIcon icon={faGooglePlusG} />
+                {/* <i className="fab fa-google-plus-g"></i> */}
               </a>
             </div>
             <div className="footer__socials-item">
               <a href="#" className="footer__socials-link">
-                <i className="fab fa-facebook-f"></i>
+                <FontAwesomeIcon icon={faFacebookF} />
+                {/* <i className="fab fa-facebook-f"></i> */}
               </a>
             </div>
             <div className="footer__socials-item">
               <a href="#" className="footer__socials-link">
-                <i className="fab fa-instagram"></i>
+                <FontAwesomeIcon icon={faInstagram} />
+                {/* <i className="fab fa-instagram"></i> */}
               </a>
             </div>
             <div className="footer__socials-item">
               <a href="#" className="footer__socials-link">
-                <i className="fab fa-twitter"></i>
+                <FontAwesomeIcon icon={faTwitter} />
+                {/* <i className="fab fa-twitter"></i> */}
               </a>
             </div>
             <div className="footer__socials-item">
               <a href="#" className="footer__socials-link">
-                <i className="fab fa-youtube"></i>
+                <FontAwesomeIcon icon={faYoutube} />
+                {/* <i className="fab fa-youtube"></i> */}
               </a>
             </div>
           </div>

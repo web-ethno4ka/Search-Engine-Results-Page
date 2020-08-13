@@ -1,0 +1,39 @@
+$color-blue: #0055a0;
+$color-white: #fff;
+$screen-lg: 992px;
+$height-field: 3.8rem;
+
+// ANIMATIONS
+$links: all 0.3s ease-in-out;
+
+// MIXINS
+@mixin btn($color-btn) {
+  width: 28rem;
+  height: $height-field;
+  font: 200 1.6rem Proxima Nova;
+  letter-spacing: 0.6px;
+  color: $color-white;
+  background: $color-btn;
+  transition: $links;
+
+  &:hover {
+    background: lighten($color-btn, 8%);
+    cursor: pointer;
+  }
+}
+
+@mixin lg {
+  @media screen and (max-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+.filter-block {
+  &__btn {
+    @include btn($color-blue);
+    margin-bottom: 0;
+    @include lg {
+      align-self: center;
+    }
+  }
+}
