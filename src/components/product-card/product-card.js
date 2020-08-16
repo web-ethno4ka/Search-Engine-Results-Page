@@ -7,9 +7,17 @@ export default function Product_card() {
   return (
     <div className="cards-block flex-row">
       <div className="cards-block__images cards-block--winter cards-block--best-price">
-        <img src="img/continental.png" alt="continental" className="cards-block__photo" />
-        <img src="img/continental_2.png" alt="continental" className="cards-block__photo-mobile" />
-        <img src="img/continental-logo.png" alt="continental-logo" className="cards-block__logo" />
+        <img src="./../../img/continental.png" alt="continental" className="cards-block__photo" />
+        <img
+          src="./../../img/continental_2.png"
+          alt="continental"
+          className="cards-block__photo-mobile"
+        />
+        <img
+          src="./../../img/continental-logo.png"
+          alt="continental-logo"
+          className="cards-block__logo"
+        />
       </div>
 
       <div className="cards-block__description">
@@ -51,8 +59,8 @@ export default function Product_card() {
           <span>22 offers</span>
           <span>-17%</span>
         </div>
-        <Button />
-        <Button />
+        <Button buttonType={'cta-block__btn-offers'} buttonText="See all offers" />
+        <Button buttonType={'cta-block__btn-cart'} buttonText="Add to cart" />
         {/* <button className="cta-block__btn-offers">See all offers</button>
         <button className="cta-block__btn-cart">Add to cart</button> */}
         <Rate />

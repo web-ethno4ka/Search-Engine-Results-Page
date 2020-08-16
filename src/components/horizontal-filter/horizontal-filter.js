@@ -13,7 +13,6 @@ export default function Horizontal_filter() {
           <Select />
           <Select />
           <Select />
-
           {/* <div className="filter-block__item">
             <label>Tyre type</label>
             <select className="input-field--regular">
@@ -60,7 +59,7 @@ export default function Horizontal_filter() {
               <option value="16">16</option>
             </select>
           </div> */}
-          <Button />
+          <Button buttonType={'filter-block__btn'} buttonText="Search" />
           {/* <button className="filter-block__btn">Search</button> */}
         </div>
       </div>
