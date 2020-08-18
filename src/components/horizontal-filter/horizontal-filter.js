@@ -9,10 +9,11 @@ export default function Horizontal_filter() {
       <div className="filter-block">
         <h3>Selected filters:</h3>
         <div className="filter-block__wrapper flex-row">
-          <Select />
-          <Select />
-          <Select />
-          <Select />
+          <Select labelName="Vehicle type" inputWidth={'input-field--regular'} />
+          <Select labelName="Tyre type" inputWidth={'input-field--regular'} />
+          <Select labelName="Width" inputWidth={'input-field--shorter'} />
+          <Select labelName="Height" inputWidth={'input-field--shorter'} />
+          <Select labelName="Diameter" inputWidth={'input-field--shorter'} />
           {/* <div className="filter-block__item">
             <label>Tyre type</label>
             <select className="input-field--regular">

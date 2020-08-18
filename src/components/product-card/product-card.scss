@@ -25,7 +25,7 @@ $screen-md: 768px;
 @mixin btn($color-btn) {
   width: 28rem;
   height: $height-field;
-  font: 200 1.6rem Proxima Nova;
+  font: 200 1.6rem Roboto;
   letter-spacing: 0.6px;
   color: $color-white;
   background: $color-btn;
