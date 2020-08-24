@@ -1,18 +1,14 @@
 import React from 'react';
 import './select.scss';
 
-export default function Select({ labelName, inputWidth, optionValue }) {
+export default function Select({ labelName, inputWidth, options }) {
   return (
     <div className="filter-block__item">
       <label>{labelName}</label>
       <select className={inputWidth}>
-        <option selected value="Car">
-          {optionValue}
-        </option>
-        <option value="Motorcycle">{optionValue}</option>
-        <option disabled>{optionValue}</option>
-        <option value="Offroad">{optionValue}</option>
-        <option value="Speciality tyres">{optionValue}</option>
+        {options.map((option) => (
+          <option value={option}>{option}</option>
+        ))}
       </select>
     </div>
     //   <div className="filter-block__item">

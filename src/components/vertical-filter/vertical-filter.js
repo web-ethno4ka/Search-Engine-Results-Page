@@ -45,8 +45,8 @@ export default function Vertical_filter() {
           <li className="sidebar-filter__item">
             <a className="sidebar-filter__category">Tyre dimension</a>
             <div className="sidebar-filter__submenu sidebar-filter__submenu-dimension flex-row">
-              <Select />
-              <Select />
+              <Select labelName={Width} />
+              <Select labelName={Width} />
               <Select />
               {/* <div className="sidebar-filter__dimension-parameter">
                 <label>Width</label>
