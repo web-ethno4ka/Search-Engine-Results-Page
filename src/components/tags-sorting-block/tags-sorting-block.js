@@ -24,7 +24,7 @@ export default function Tags_sorting_block() {
         </li> */}
 
       <div className="sorting-block">
-        <Select />
+        {/* <Select /> */}
         {/* <div className="sorting-block__item">
           <label>Sorting: &nbsp;</label>
           <select className="input-field--shorter">

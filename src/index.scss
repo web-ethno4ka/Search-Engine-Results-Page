@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 $color-dark-gray: #333333;
 
 * {
@@ -13,7 +14,7 @@ html {
 
 body {
   width: 100%;
-  font: 300 1.4rem Roboto, sans-serif;
+  font: 1.4rem Roboto, sans-serif;
   color: $color-dark-gray;
 }
 

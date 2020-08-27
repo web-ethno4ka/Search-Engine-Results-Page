@@ -4,64 +4,32 @@ import Button from '../button/button';
 import './horizontal-filter.scss';
 
 export default function Horizontal_filter() {
+  const [options, setOptions] = React.useState([
+    ['Car tyres', 'Motorcycle tyres', 'Van tyres', 'Offroad tyres', 'All tyres'],
+    ['Winter tyres', 'Summer tyres', 'All-season tyres', 'All tyres'],
+    [225, 215, 195, 186, 170],
+    [50, 45, 40, 35, 30],
+    [20, 19, 18, 17, 16],
+  ]);
   return (
     <React.Fragment>
       <div className="filter-block">
         <h3>Selected filters:</h3>
         <div className="filter-block__wrapper flex-row">
-          <Select labelName="Vehicle type" inputWidth={'input-field--regular'} />
-          <Select labelName="Tyre type" inputWidth={'input-field--regular'} />
-          <Select labelName="Width" inputWidth={'input-field--shorter'} />
-          <Select labelName="Height" inputWidth={'input-field--shorter'} />
-          <Select labelName="Diameter" inputWidth={'input-field--shorter'} />
-          {/* <div className="filter-block__item">
-            <label>Tyre type</label>
-            <select className="input-field--regular">
-              <option selected value="Winter tyres">
-                Winter tyres
-              </option>
-              <option value="Summer tyres">Summer tyres</option>
-              <option value="All-season tyres">All-season tyres</option>
-            </select>
-          </div>
-          <div className="filter-block__item">
-            <label>Width</label>
-            <select className="input-field--shorter">
-              <option selected value="225">
-                225
-              </option>
-              <option value="215">215</option>
-              <option value="205">205</option>
-              <option value="195">195</option>
-              <option value="185">185</option>
-            </select>
-          </div>
-          <div className="filter-block__item">
-            <label>Height</label>
-            <select className="input-field--shorter">
-              <option selected value="50">
-                50
-              </option>
-              <option value="45">45</option>
-              <option value="40">40</option>
-              <option value="35">35</option>
-              <option value="30">30</option>
-            </select>
-          </div>
-          <div className="filter-block__item">
-            <label>Diameter</label>
-            <select className="input-field--shorter">
-              <option selected value="20">
-                20
-              </option>
-              <option value="19">19</option>
-              <option value="18">18</option>
-              <option value="17">17</option>
-              <option value="16">16</option>
-            </select>
-          </div> */}
+          <Select
+            labelName={'Vehicle type'}
+            inputWidth={'input-field--regular'}
+            options={options[0]}
+          />
+          <Select
+            labelName={'Tyre type'}
+            inputWidth={'input-field--regular'}
+            options={options[1]}
+          />
+          <Select labelName={'Width'} inputWidth={'input-field--shorter'} options={options[2]} />
+          <Select labelName={'Height'} inputWidth={'input-field--shorter'} options={options[3]} />
+          <Select labelName={'Diameter'} inputWidth={'input-field--shorter'} options={options[4]} />
           <Button buttonType={'filter-block__btn'} buttonText="Search" />
-          {/* <button className="filter-block__btn">Search</button> */}
         </div>
       </div>
     </React.Fragment>

@@ -4,6 +4,14 @@ import Select from '../select/select';
 import './vertical-filter.scss';
 
 export default function Vertical_filter() {
+  const [options, setOptions] = React.useState([
+    [225, 215, 195, 186, 170],
+    [50, 45, 40, 35, 30],
+    [20, 19, 18, 17, 16],
+    [50, 45, 40, 35, 30],
+    ['H(210km/h)', 'N(140km/h)', 'S(180km/h)', 'V(240km/h)', 'Y(300km/h)'],
+  ]);
+
   return (
     <aside className="aside-filter">
       <Button />
@@ -45,9 +53,21 @@ export default function Vertical_filter() {
           <li className="sidebar-filter__item">
             <a className="sidebar-filter__category">Tyre dimension</a>
             <div className="sidebar-filter__submenu sidebar-filter__submenu-dimension flex-row">
-              <Select labelName={Width} />
-              <Select labelName={Width} />
-              <Select />
+              <Select
+                labelName={'Width'}
+                inputWidth={'input-field--shortest'}
+                options={options[0]}
+              />
+              <Select
+                labelName={'Height'}
+                inputWidth={'input-field--shortest'}
+                options={options[1]}
+              />
+              <Select
+                labelName={'Diameter'}
+                inputWidth={'input-field--shortest'}
+                options={options[2]}
+              />
               {/* <div className="sidebar-filter__dimension-parameter">
                 <label>Width</label>
                 <select className="input-field--shortest">
@@ -89,8 +109,16 @@ export default function Vertical_filter() {
           <li className="sidebar-filter__item">
             <a className="sidebar-filter__category">Index</a>
             <div className="sidebar-filter__submenu">
-              <Select />
-              <Select />
+              <Select
+                labelName={'Load Index'}
+                inputWidth={'input-field--regular'}
+                options={options[3]}
+              />
+              <Select
+                labelName={'Speed Index'}
+                inputWidth={'input-field--regular'}
+                options={options[4]}
+              />
               {/* <div className="sidebar-filter__index-parameter">
                 <label>Load index</label>
                 <select className="input-field--regular">
