@@ -32,6 +32,11 @@ $screen-md: 768px;
   }
 }
 
+.tags-block {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .sorting-block {
   padding-right: 2rem;
   @include md {

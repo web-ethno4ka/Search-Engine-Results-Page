@@ -54,95 +54,40 @@ export default function Vertical_filter() {
             <a className="sidebar-filter__category">Tyre dimension</a>
             <div className="sidebar-filter__submenu sidebar-filter__submenu-dimension flex-row">
               <Select
+                typeOfBlock={'sidebar-filter__dimension-parameter'}
                 labelName={'Width'}
                 inputWidth={'input-field--shortest'}
                 options={options[0]}
               />
               <Select
+                typeOfBlock={'sidebar-filter__dimension-parameter'}
                 labelName={'Height'}
                 inputWidth={'input-field--shortest'}
                 options={options[1]}
               />
               <Select
+                typeOfBlock={'sidebar-filter__dimension-parameter'}
                 labelName={'Diameter'}
                 inputWidth={'input-field--shortest'}
                 options={options[2]}
               />
-              {/* <div className="sidebar-filter__dimension-parameter">
-                <label>Width</label>
-                <select className="input-field--shortest">
-                  <option selected value="225">
-                    225
-                  </option>
-                  <option value="215">215</option>
-                  <option value="205">205</option>
-                  <option value="195">195</option>
-                  <option value="185">185</option>
-                </select>
-              </div>
-              <div className="sidebar-filter__dimension-parameter">
-                <label>Height</label>
-                <select className="input-field--shortest">
-                  <option selected value="50">
-                    50
-                  </option>
-                  <option value="45">45</option>
-                  <option value="40">40</option>
-                  <option value="35">35</option>
-                  <option value="30">30</option>
-                </select>
-              </div>
-              <div className="sidebar-filter__dimension-parameter">
-                <label>Diameter</label>
-                <select className="input-field--shortest">
-                  <option selected value="20">
-                    20
-                  </option>
-                  <option value="19">19</option>
-                  <option value="18">18</option>
-                  <option value="17">17</option>
-                  <option value="16">16</option>
-                </select>
-              </div> */}
             </div>
           </li>
           <li className="sidebar-filter__item">
             <a className="sidebar-filter__category">Index</a>
             <div className="sidebar-filter__submenu">
               <Select
+                typeOfBlock={'sidebar-filter__index-parameter'}
                 labelName={'Load Index'}
                 inputWidth={'input-field--regular'}
                 options={options[3]}
               />
               <Select
+                typeOfBlock={'sidebar-filter__index-parameter'}
                 labelName={'Speed Index'}
                 inputWidth={'input-field--regular'}
                 options={options[4]}
               />
-              {/* <div className="sidebar-filter__index-parameter">
-                <label>Load index</label>
-                <select className="input-field--regular">
-                  <option selected value="225">
-                    225
-                  </option>
-                  <option value="215">215</option>
-                  <option value="205">205</option>
-                  <option value="195">195</option>
-                  <option value="185">185</option>
-                </select>
-              </div>
-              <div className="sidebar-filter__index-parameter">
-                <label>Speed index</label>
-                <select className="input-field--regular">
-                  <option selected value="50">
-                    50
-                  </option>
-                  <option value="45">45</option>
-                  <option value="40">40</option>
-                  <option value="35">35</option>
-                  <option value="30">30</option>
-                </select>
-              </div> */}
             </div>
           </li>
           <li className="sidebar-filter__item">

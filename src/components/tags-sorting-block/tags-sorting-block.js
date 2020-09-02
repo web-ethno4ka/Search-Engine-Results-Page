@@ -4,39 +4,29 @@ import Tags_block from './tags-block';
 import './tags-sorting-block.scss';
 
 export default function Tags_sorting_block() {
+  const [options, setOptions] = React.useState([
+    'Popularity',
+    'Relevance',
+    'Price ascending',
+    'Price descending',
+    'Average rate',
+  ]);
   return (
     <div className="tags-sorting-block">
-      <Tags_block />
-      {/* <li className="tags-block__item">
-          <a href="#" className="tags-block__link">
-            Load index: 225
-          </a>
-        </li>
-        <li className="tags-block__item">
-          <a href="#" className="tags-block__link">
-            Pirelli
-          </a>
-        </li>
-        <li className="tags-block__item">
-          <a href="#" className="tags-block__link">
-            Diameter: 19
-          </a>
-        </li> */}
+      <div className="tags-block">
+        <Tags_block tagName={'Load index: 225'} tagLink={'#'} />
+        <Tags_block tagName={'Diameter: 19'} tagLink={'#'} />
+        <Tags_block tagName={'Pirelli'} tagLink={'#'} />
+        <Tags_block tagName={'Winter'} tagLink={'#'} />
+      </div>
 
       <div className="sorting-block">
-        {/* <Select /> */}
-        {/* <div className="sorting-block__item">
-          <label>Sorting: &nbsp;</label>
-          <select className="input-field--shorter">
-            <option selected value="Popularity">
-              Popularity
-            </option>
-            <option value="Relevance">Relevance</option>
-            <option value="Price ascending">Price ascending</option>
-            <option value="Price descending">Price descending</option>
-            <option value="Average rate">Average rate</option>
-          </select>
-        </div> */}
+        <Select
+          typeOfBlock={'sorting-block__item'}
+          labelName={'Sorting: '}
+          className={'input-field--shorter'}
+          options={options}
+        />
       </div>
     </div>
   );

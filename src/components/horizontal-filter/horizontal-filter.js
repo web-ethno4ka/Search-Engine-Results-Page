@@ -17,18 +17,35 @@ export default function Horizontal_filter() {
         <h3>Selected filters:</h3>
         <div className="filter-block__wrapper flex-row">
           <Select
+            typeOfBlock={'filter-block__item'}
             labelName={'Vehicle type'}
             inputWidth={'input-field--regular'}
             options={options[0]}
           />
           <Select
+            typeOfBlock={'filter-block__item'}
             labelName={'Tyre type'}
             inputWidth={'input-field--regular'}
             options={options[1]}
           />
-          <Select labelName={'Width'} inputWidth={'input-field--shorter'} options={options[2]} />
-          <Select labelName={'Height'} inputWidth={'input-field--shorter'} options={options[3]} />
-          <Select labelName={'Diameter'} inputWidth={'input-field--shorter'} options={options[4]} />
+          <Select
+            typeOfBlock={'filter-block__item'}
+            labelName={'Width'}
+            inputWidth={'input-field--shorter'}
+            options={options[2]}
+          />
+          <Select
+            typeOfBlock={'filter-block__item'}
+            labelName={'Height'}
+            inputWidth={'input-field--shorter'}
+            options={options[3]}
+          />
+          <Select
+            typeOfBlock={'filter-block__item'}
+            labelName={'Diameter'}
+            inputWidth={'input-field--shorter'}
+            options={options[4]}
+          />
           <Button buttonType={'filter-block__btn'} buttonText="Search" />
         </div>
       </div>
