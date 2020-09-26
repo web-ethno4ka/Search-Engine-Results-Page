@@ -37,24 +37,6 @@ export default function Product_card() {
               <a href="#">{price}</a>
             </p>
           ))}
-          {/* {links.map((link, price, index) => (
-            <p className="cards-block__item" key={index}>
-              <a href={link}>{link}</a>
-              <a href="#">{price}</a>
-            </p>
-          ))} */}
-          {/* <p className="cards-block__item">
-            <a href="#">mytyres.co.uk</a>
-            <a href="#">$128.4</a>
-          </p>
-          <p className="cards-block__item">
-            <a href="#">autopink-shop.co.uk</a>
-            <a href="#">$120.9</a>
-          </p>
-          <p className="cards-block__item">
-            <a href="#">tirendo.co.uk</a>
-            <a href="#">$132.0</a>
-          </p> */}
         </div>
         <div className="tyre-characteristics">
           <a href="#" className="tyre-characteristics__link fuel-efficiency">

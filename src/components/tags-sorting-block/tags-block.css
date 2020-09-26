@@ -1,0 +1,54 @@
+.tags-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .tags-block {
+    max-width: 50vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tags-block {
+    max-width: 95vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .tags-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.tags-block__item {
+  position: relative;
+  margin-top: 0;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 3.5rem;
+  border: 1px solid #0055a0;
+  border-radius: 2rem;
+}
+
+.tags-block__link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #0055a0;
+}
+
+.tags-block__link::before {
+  content: url("./../../img/close-solid.svg");
+  position: absolute;
+  width: 1.5rem;
+  right: 0.8rem;
+  top: 0.7rem;
+}
+/*# sourceMappingURL=tags-block.css.map */

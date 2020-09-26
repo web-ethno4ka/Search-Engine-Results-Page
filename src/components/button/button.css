@@ -1,1 +1,144 @@
-/* No CSS *//*# sourceMappingURL=button.css.map */
+.filter-block__btn {
+  width: 28rem;
+  height: 3.8rem;
+  font: 200 1.6rem Roboto;
+  letter-spacing: 0.6px;
+  color: #fff;
+  background: #0055a0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 0;
+}
+
+.filter-block__btn:hover {
+  background: #006bc9;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  .filter-block__btn {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+.cta-block {
+  width: 25%;
+  max-width: 28rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .cta-block {
+    margin: auto;
+    min-width: 10rem;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cta-block {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+.cta-block__price {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0055a0;
+}
+
+@media screen and (max-width: 400px) {
+  .cta-block__price {
+    display: block;
+  }
+}
+
+.cta-block__discount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 400px) {
+  .cta-block__discount {
+    display: none;
+  }
+}
+
+.cta-block__discount > span {
+  font-size: 1.6rem;
+  color: #333333;
+}
+
+.cta-block__discount > span:nth-child(2) {
+  padding: 0.5rem 2rem;
+  border: 1px solid #ff6000;
+  color: #ff6000;
+}
+
+.cta-block__btn-offers {
+  width: 28rem;
+  height: 3.8rem;
+  font: 200 1.6rem Proxima Nova;
+  letter-spacing: 0.6px;
+  color: #fff;
+  background: #ababab;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+.cta-block__btn-offers:hover {
+  background: #bfbfbf;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  .cta-block__btn-offers {
+    width: 45%;
+  }
+}
+
+.cta-block__btn-cart {
+  width: 28rem;
+  height: 3.8rem;
+  font: 200 1.6rem Roboto;
+  letter-spacing: 0.6px;
+  color: #fff;
+  background: #7ab51d;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+.cta-block__btn-cart:hover {
+  background: #92d823;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  .cta-block__btn-cart {
+    width: 45%;
+  }
+}
+
+.cta-block button[class^='cta-block__btn'] {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 400px) {
+  .cta-block button[class^='cta-block__btn'] {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+}
+/*# sourceMappingURL=button.css.map */
