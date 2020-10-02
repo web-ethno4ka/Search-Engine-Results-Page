@@ -79,7 +79,6 @@ $screen-lg: 992px;
       width: 100%;
       max-width: 28rem;
     }
-
     @include md {
       margin: 3rem 0;
       display: none;
@@ -88,6 +87,9 @@ $screen-lg: 992px;
       display: block;
       margin: auto;
       margin-bottom: 2rem;
+    }
+    &--sorting {
+      @include btn($color-blue);
     }
 
     &--mobile {
@@ -222,3 +224,16 @@ input[type='checkbox']:checked:after {
   z-index: 2;
   transform: rotate(-45deg);
 }
+
+.mt {
+  margin-top: 2rem;
+}
+
+.is-active {
+  background-color: blue;
+}
+
+// .toggler {
+//   max-height: 0;
+//   overflow: hidden;
+// }

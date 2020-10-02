@@ -31,7 +31,7 @@ export default function Product_card() {
         </h3>
         <div className="cards-block__links">
           <span>Quicklink to the offer:</span>
-          {Object.values(links).map(({ link, price }, index) => (
+          {links.map(({ link, price }, index) => (
             <p className="cards-block__item" key={index}>
               <a href={link}>{link}</a>
               <a href="#">{price}</a>

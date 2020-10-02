@@ -60,3 +60,8 @@ $screen-md: 768px;
     margin-left: 0;
   }
 }
+
+.column-direction {
+  display: flex;
+  flex-direction: column;
+}

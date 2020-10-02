@@ -53,6 +53,22 @@
   }
 }
 
+.aside-filter__btn--sorting {
+  width: 28rem;
+  height: 3.8rem;
+  font: 200 1.6rem Roboto;
+  letter-spacing: 0.6px;
+  color: #fff;
+  background: #0055a0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.aside-filter__btn--sorting:hover {
+  background: #006bc9;
+  cursor: pointer;
+}
+
 .aside-filter__btn--mobile {
   display: none;
 }
@@ -114,8 +130,6 @@
 
 .sidebar-filter__submenu {
   margin: 0 0 0 1rem;
-  max-height: 0;
-  overflow: hidden;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -227,5 +241,18 @@ input[type='checkbox']:checked:after {
   z-index: 2;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.mt {
+  margin-top: 2rem;
+}
+
+.is-active {
+  background-color: blue;
+}
+
+.toggler {
+  max-height: 0;
+  overflow: hidden;
 }
 /*# sourceMappingURL=vertical-filter.css.map */
