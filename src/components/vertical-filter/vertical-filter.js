@@ -1,21 +1,25 @@
 import React from 'react';
 import Button from '../button/button';
 
-import Type_of_product from './categories/type-of-product';
+import TypeOfProduct from './categories/type-of-product';
 import Seasons from './categories/seasons';
-import Tyre_dimension from './categories/tyre-dimension';
+import TyreDimension from './categories/tyre-dimension';
 import Index from './categories/index';
 import Brands from './categories/brands';
 import './vertical-filter.scss';
 
-export default function Vertical_filter() {
+export default function VerticalFilter() {
+  const [filter, setFilter] = React.useState(false);
+  const toggle = () => {
+    setFilter(!filter);
+  };
   return (
     <aside className="aside-filter">
       <div className="sidebar-filter">
         <ul className="sidebar-filter__list">
-          <Type_of_product />
+          <TypeOfProduct toggler={toggle} />
           <Seasons />
-          <Tyre_dimension />
+          <TyreDimension />
           <Index />
           <Brands />
         </ul>

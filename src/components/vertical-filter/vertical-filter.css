@@ -130,6 +130,8 @@
 
 .sidebar-filter__submenu {
   margin: 0 0 0 1rem;
+  max-height: 0;
+  overflow: hidden;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -249,10 +251,5 @@ input[type='checkbox']:checked:after {
 
 .is-active {
   background-color: blue;
-}
-
-.toggler {
-  max-height: 0;
-  overflow: hidden;
 }
 /*# sourceMappingURL=vertical-filter.css.map */

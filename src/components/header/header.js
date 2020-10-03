@@ -14,7 +14,7 @@ import logo from './../../img/logo.png';
 export default function Header() {
   return (
     <header className="header flex-row ">
-      <div className="header__logo-block" onclick="window.location.href='#'">
+      <div className="header__logo-block">
         <img src={logo} alt={'logotype'} />
       </div>
 

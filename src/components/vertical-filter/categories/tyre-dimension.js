@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from '../../select/select';
 
-const Tyre_dimension = () => {
+const TyreDimension = () => {
   const [options, setOptions] = React.useState([
     [225, 215, 195, 186, 170],
     [50, 45, 40, 35, 30],
