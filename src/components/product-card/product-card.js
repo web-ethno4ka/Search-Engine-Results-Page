@@ -6,7 +6,7 @@ import continentalTyre from './../../img/continental.png';
 import continentalTyreForMobile from './../../img/continental_2.png';
 import continentalLogo from './../../img/continental-logo.png';
 
-export default function Product_card() {
+export default function ProductCard() {
   const [links, setLinks] = React.useState([
     { link: 'mytyres.co.uk', price: '$128.4' },
     { link: 'autopink-shop.co.uk', price: '$140.1' },

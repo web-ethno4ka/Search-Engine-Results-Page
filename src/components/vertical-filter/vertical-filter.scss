@@ -136,9 +136,10 @@ $screen-lg: 992px;
 
   &__submenu {
     margin: 0 0 0 1rem;
-    max-height: 0;
-    overflow: hidden;
-    transition: $links;
+    // max-height: 0;
+    // overflow: hidden;
+    // transition: $links;
+    transition: all 0.4s ease-in-out;
     @include md {
       margin-left: 0;
     }
@@ -233,7 +234,6 @@ input[type='checkbox']:checked:after {
   background-color: blue;
 }
 
-// .toggler {
-//   max-height: 0;
-//   overflow: hidden;
-// }
+.active {
+  background-color: blue;
+}

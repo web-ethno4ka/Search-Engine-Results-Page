@@ -1,9 +1,9 @@
 import React from 'react';
 import Select from '../select/select';
-import Tags_block from './tags-block';
+import TagsBlock from './tags-block';
 import './tags-sorting-block.scss';
 
-export default function Tags_sorting_block() {
+export default function TagsSortingBlock() {
   const [options, setOptions] = React.useState([
     'Popularity',
     'Relevance',
@@ -14,10 +14,10 @@ export default function Tags_sorting_block() {
   return (
     <div className="tags-sorting-block">
       <div className="tags-block">
-        <Tags_block tagName={'Load index: 225'} tagLink={'#'} />
-        <Tags_block tagName={'Diameter: 19'} tagLink={'#'} />
-        <Tags_block tagName={'Pirelli'} tagLink={'#'} />
-        <Tags_block tagName={'Winter'} tagLink={'#'} />
+        <TagsBlock tagName={'Load index: 225'} tagLink={'#'} />
+        <TagsBlock tagName={'Diameter: 19'} tagLink={'#'} />
+        <TagsBlock tagName={'Pirelli'} tagLink={'#'} />
+        <TagsBlock tagName={'Winter'} tagLink={'#'} />
       </div>
 
       <div className="sorting-block">

@@ -1,7 +1,7 @@
 import React from 'react';
 import './tags-block.scss';
 
-export default function Tags_block({ tagName, tagLink }) {
+export default function TagsBlock({ tagName, tagLink }) {
   return (
     <React.Fragment>
       <ul className="tags-block">

@@ -3,7 +3,7 @@ import Select from '../select/select';
 import Button from '../button/button';
 import './horizontal-filter.scss';
 
-export default function Horizontal_filter() {
+export default function HorizontalFilter() {
   const [options, setOptions] = React.useState([
     ['Car tyres', 'Motorcycle tyres', 'Van tyres', 'Offroad tyres', 'All tyres'],
     ['Winter tyres', 'Summer tyres', 'All-season tyres', 'All tyres'],
