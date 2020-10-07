@@ -1,4 +1,6 @@
 import React from 'react';
+// import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+// import Fade from 'react-reveal/Fade';
 
 const TypeOfProduct = () => {
   const [filter, setFilter] = React.useState(false);
@@ -11,8 +13,33 @@ const TypeOfProduct = () => {
         Categories
       </a>
       {filter ? (
-        <ul className={filter ? 'sidebar-filter__submenu active' : 'sidebar-filter__submenu'}>
-          <li>
+        <div className="sidebar-filter__submenu">
+          <div>
+            <input type="radio" id="tyres-option" name="categories" value="tyres" />
+            <label htmlFor="tyres-option">Tyres</label>
+          </div>
+          <div>
+            <input type="radio" id="wheels-option" name="categories" value="wheels" />
+            <label htmlFor="wheels-option">Wheels</label>
+          </div>
+          <div>
+            <input type="radio" id="oils-option" name="categories" value="oils" />
+            <label htmlFor="oils-option">Oils</label>
+          </div>
+          <div>
+            <input type="radio" id="accesories-option" name="categories" value="accesories" />
+            <label htmlFor="accesories-option">Accesories</label>
+          </div>
+        </div>
+      ) : null}
+    </li>
+  );
+};
+
+export default TypeOfProduct;
+
+{
+  /* <li>
             <a href="#">Tyres</a>
           </li>
           <li>
@@ -23,11 +50,5 @@ const TypeOfProduct = () => {
           </li>
           <li>
             <a href="#">Accesories</a>
-          </li>
-        </ul>
-      ) : null}
-    </li>
-  );
-};
-
-export default TypeOfProduct;
+          </li> */
+}

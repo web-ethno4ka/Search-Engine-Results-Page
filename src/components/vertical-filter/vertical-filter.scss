@@ -136,23 +136,16 @@ $screen-lg: 992px;
 
   &__submenu {
     margin: 0 0 0 1rem;
-    // max-height: 0;
-    // overflow: hidden;
-    // transition: $links;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.3s linear;
     @include md {
       margin-left: 0;
     }
-  }
-
-  &__submenu li a:hover {
-    color: $color-blue;
-    transition: all 0.3s ease-in-out;
-  }
-
-  &__submenu li,
-  input {
-    margin-top: 1rem;
+    div {
+      margin-top: 1.4rem;
+      input {
+        margin-right: 1rem;
+      }
+    }
   }
 
   &__submenu-dimension {
@@ -228,10 +221,6 @@ input[type='checkbox']:checked:after {
 
 .mt {
   margin-top: 2rem;
-}
-
-.is-active {
-  background-color: blue;
 }
 
 .active {
