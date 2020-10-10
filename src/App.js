@@ -9,12 +9,10 @@ import ProductCard from './components/product-card/product-card';
 import Pagination from './components/pagination/pagination';
 import TagsSortingBlock from './components/tags-sorting-block/tags-sorting-block';
 import Footer from './components/footer/footer';
-import { Context } from './context/context';
 
 function App() {
   const [filter, setFilter] = React.useState(false);
   const [typeOfProduct, setTypeOfProduct] = React.useState(null);
-  const [chooseFilter] = React.useContext(Context);
   const toggle = () => {
     setFilter(!filter);
   };
@@ -33,8 +31,7 @@ function App() {
                 buttonText="Show filters"
                 onBtnClick={toggle}
               />
-              {filter ? <VerticalFilter onChange={chooseFilter} /> : null}
-              {/* setTypeOfProduct={setTypeOfProduct} */}
+              {filter ? <VerticalFilter setTypeOfProduct={setTypeOfProduct} /> : null}
               <Button
                 buttonType={'aside-filter__btn mt'}
                 buttonText="Remove filters"
